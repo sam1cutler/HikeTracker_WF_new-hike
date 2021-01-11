@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hike Tracker - New Hike Entry Form</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <nav>
+    Nav bar
+  </nav>
+
+  <main>
+    <header>
+      <h1>New hike</h1>
+    </header>
+
+    <section>
+      <form id='new-hike-entry'>
+        <section class='hike-form-supersection'>
+          <p>REQUIRED info:</p>
+          <section class='hike-form-section'>
+            <label for='hike-name'>Hike name:</label>
+            <input type="text" name='hike-name' placeholder='Mailbox Peak' required>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-date'>Date (day / month / year):</label>
+            <input type="number" name="date-day" class="date-day"  placeholder="01" min="1" max="31" required=""> /
+            <input type="number" name="date-month" id="date-month" placeholder="01" min="1" max="12" required=""> /
+            <input type="number" name="date-year" class="date-year" placeholder="2017" min="1900" max="2021" required="">
+          </section>
+        </section>
+        <section class='hike-form-supersection'>
+          <p>OPTIONAL info:</p>
+          <section class='hike-form-section'>
+            <label for='hike-distance'>Distance (miles):</label>
+            <input type="number" name='hike-distance' placeholder=10>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-time'>Time (hours):</label>
+            <input type="number" name='hike-time' placeholder=4>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-elevation'>Total elevation change (feet):</label>
+            <input type="number" name='hike-elevation' placeholder=2000>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-weather'>Weather:</label>
+            <select name='hike-weather' id='hike-weather'>
+              <option value='sun'>Sun</option>
+              <option value='cloudy'>Clouds</option>
+              <option value='rain'>Rain</option>
+              <option value='snow'>Snow</option>
+            </select>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-notes'>Notes:</label>
+            <textarea id='hike-notes' name='hike-notes' rows='4' cols='50'>
+            </textarea>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-reference'>Reference:</label>
+            <input type='text' name='hike-reference' size=50 placeholder='https://www.wta.org/go-hiking/hikes/mailbox-peak'>
+          </section>
+          <section class='hike-form-section'>
+            <label for='hike-steps'>Total steps taken:</label>
+            <input type="number" name='hike-steps' placeholder=20,000>
+          </section>
+        </section>
+        <section class='hike-form-section'>
+          <button type='submit'>Submit hike</button>
+          <button type='reset'>Reset form</button>
+        </section>
+      </form>
+    </section>
+    
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
